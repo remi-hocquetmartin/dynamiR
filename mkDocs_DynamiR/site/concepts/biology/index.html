@@ -1,0 +1,2164 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A tool for identifying microRNA binding sites on target mRNA sequences">
+      
+      
+        <meta name="author" content="Your Team Name">
+      
+      
+        <link rel="canonical" href="https://yoursite.com/concepts/biology/">
+      
+      
+        <link rel="prev" href="../../features/dynamite_mode/">
+      
+      
+        <link rel="next" href="../how_it_works/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Biological Concepts - DynamiR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-W20WZ887RV"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-W20WZ887RV",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-W20WZ887RV",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#biological-concepts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DynamiR" class="md-header__button md-logo" aria-label="DynamiR" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DynamiR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Biological Concepts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/getting_started/" class="md-tabs__link">
+          
+  
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../features/matching_mode/" class="md-tabs__link">
+          
+  
+  
+  Features
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Understanding
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DynamiR" class="md-nav__button md-logo" aria-label="DynamiR" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    DynamiR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/matching_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matching Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/dynamite_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamite Mode (Database Scan)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Understanding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biological Concepts
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biological Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-micrornas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What are microRNAs?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What are microRNAs?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-they-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where They Come From
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#their-role-in-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Their Role in Cells
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-mrna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is mRNA?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is mRNA?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrna-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mRNA Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3utr-where-micrornas-bind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3'UTR: Where microRNAs Bind
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-binding-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Binding Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Binding Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-seed-region-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Seed Region Recognition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-finding-the-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Finding the Match
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-duplex-formation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Duplex Formation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-functional-outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Functional Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-pairing-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base Pairing Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Base Pairing Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#watson-crick-pairs-strong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Watson-Crick Pairs (Strong)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wobble-pairs-weaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wobble Pairs (Weaker)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-pairing-mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No Pairing (Mismatch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seed-region-specificity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seed Region Specificity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seed Region Specificity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-seed-matters-most" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Seed Matters Most
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-seed-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternative Seed Definitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supplementary-pairing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supplementary Pairing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supplementary Pairing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beyond-the-seed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beyond the Seed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impact-of-supplementary-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impact of Supplementary Pairs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scoring-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoring System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3utr-importance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3'UTR Importance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3&#39;UTR Importance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-only-3utr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Only 3'UTR?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regulatory-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regulatory Effect
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#biological-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Biological Reality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Biological Reality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-many-micrornas-target-one-gene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Many microRNAs Target One Gene?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-microrna-targets-multiple-genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One microRNA Targets Multiple Genes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-biological-importance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples of Biological Importance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-this-tool-is-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When This Tool Is Used
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When This Tool Is Used">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In Research
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-diagnosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In Diagnosis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions &amp; Limitations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assumptions &amp; Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#this-tool-assumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        This Tool Assumes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-this-tool-does-not-include" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What This Tool Does NOT Include
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Complexity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how_it_works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How It Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-micrornas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What are microRNAs?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What are microRNAs?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-they-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where They Come From
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#their-role-in-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Their Role in Cells
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-mrna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is mRNA?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is mRNA?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrna-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mRNA Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3utr-where-micrornas-bind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3'UTR: Where microRNAs Bind
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-binding-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Binding Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Binding Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-seed-region-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Seed Region Recognition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-finding-the-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Finding the Match
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-duplex-formation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Duplex Formation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-functional-outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Functional Outcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-pairing-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base Pairing Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Base Pairing Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#watson-crick-pairs-strong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Watson-Crick Pairs (Strong)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wobble-pairs-weaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wobble Pairs (Weaker)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-pairing-mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No Pairing (Mismatch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seed-region-specificity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seed Region Specificity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seed Region Specificity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-seed-matters-most" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Seed Matters Most
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-seed-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternative Seed Definitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supplementary-pairing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supplementary Pairing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supplementary Pairing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beyond-the-seed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beyond the Seed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impact-of-supplementary-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impact of Supplementary Pairs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scoring-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoring System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3utr-importance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3'UTR Importance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3&#39;UTR Importance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-only-3utr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Only 3'UTR?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regulatory-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regulatory Effect
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#biological-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Biological Reality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Biological Reality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-many-micrornas-target-one-gene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Many microRNAs Target One Gene?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-microrna-targets-multiple-genes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One microRNA Targets Multiple Genes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-biological-importance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples of Biological Importance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-this-tool-is-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When This Tool Is Used
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When This Tool Is Used">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In Research
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-diagnosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In Diagnosis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions &amp; Limitations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assumptions &amp; Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#this-tool-assumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        This Tool Assumes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-this-tool-does-not-include" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What This Tool Does NOT Include
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Complexity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="biological-concepts">Biological Concepts</h1>
+<h2 id="what-are-micrornas">What are microRNAs?</h2>
+<h3 id="basic-definition">Basic Definition</h3>
+<p><strong>microRNAs (miRNAs)</strong> are small RNA molecules (~22 nucleotides) that regulate gene expression by binding to messenger RNA (mRNA) and controlling their stability and translation.</p>
+<div class="highlight"><pre><span></span><code>microRNA: 5&#39;- UGUGAAACGUGCGACACUAA -3&#39;  (22 nt)
+         Small, regulatory RNA molecule
+</code></pre></div>
+<h3 id="where-they-come-from">Where They Come From</h3>
+<ol>
+<li><strong>Transcribed</strong> from DNA as long precursors</li>
+<li><strong>Processed</strong> by cellular machinery</li>
+<li><strong>Loaded</strong> into RISC complex (regulatory protein)</li>
+<li><strong>Mature form</strong> is the active ~22 nucleotide molecule</li>
+<li><strong>Binds</strong> to target mRNAs</li>
+</ol>
+<h3 id="their-role-in-cells">Their Role in Cells</h3>
+<ul>
+<li>🎯 <strong>Gene regulation</strong>: Control when proteins are made</li>
+<li>🛑 <strong>Silencing</strong>: Reduce or block protein production</li>
+<li>🔄 <strong>Fine-tuning</strong>: Adjust gene expression levels</li>
+<li>🧬 <strong>Development</strong>: Regulate developmental processes</li>
+<li>⚖️ <strong>Homeostasis</strong>: Maintain cellular balance</li>
+</ul>
+<hr />
+<h2 id="what-is-mrna">What is mRNA?</h2>
+<h3 id="basic-definition_1">Basic Definition</h3>
+<p><strong>Messenger RNA (mRNA)</strong> carries genetic instructions from DNA to ribosomes, where proteins are synthesized.</p>
+<div class="highlight"><pre><span></span><code>DNA → mRNA → Protein
+     (transcription)  (translation)
+</code></pre></div>
+<h3 id="mrna-structure">mRNA Structure</h3>
+<div class="highlight"><pre><span></span><code>5&#39; cap ─── 5&#39;UTR ─── CDS ─── 3&#39;UTR ─── poly(A) tail
+        (untranslated) (protein coding) (untranslated)
+</code></pre></div>
+<h3 id="3utr-where-micrornas-bind">3'UTR: Where microRNAs Bind</h3>
+<p>The <strong>3' Untranslated Region (3'UTR)</strong> is the critical zone:
+- Located AFTER the protein-coding sequence
+- Not translated into protein
+- Contains microRNA binding sites
+- ~100-1000+ nucleotides typically
+- Multiple microRNAs can bind one 3'UTR</p>
+<p><strong>Why here?</strong>
+- ✅ Accessible to microRNAs
+- ✅ Doesn't interfere with protein production
+- ✅ Regulatory region (intended for control)
+- ✅ Evolutionarily conserved</p>
+<hr />
+<h2 id="how-binding-works">How Binding Works</h2>
+<h3 id="step-1-seed-region-recognition">Step 1: Seed Region Recognition</h3>
+<p>The <strong>seed region</strong> (nucleotides 2-7 of microRNA) is critical:</p>
+<div class="highlight"><pre><span></span><code>microRNA:  5&#39;- U GUGAAACGUGCGACACUAA -3&#39;
+Position:     1 2345678910...
+                 └─seed region─┘
+              (positions 2-7)
+</code></pre></div>
+<p>The seed is short (6 nucleotides) but extremely important:
+- ✅ Provides specificity
+- ✅ Determines target mRNA selection
+- ✅ Must be complementary to mRNA
+- ✅ Watson-Crick base pairing</p>
+<h3 id="step-2-finding-the-match">Step 2: Finding the Match</h3>
+<p>The seed reverse complement searches for matching sequences:</p>
+<div class="highlight"><pre><span></span><code>microRNA seed:    5&#39;- G U A A C G -3&#39;
+Reverse:          3&#39;- G A U U C G -5&#39;
+Complement:       3&#39;- C G U A G C -5&#39;
+
+Looking for in mRNA:
+3&#39;- C G U A G C -5&#39;   ← This sequence in mRNA
+5&#39;- G C A U C G -3&#39;   (displayed 5&#39; to 3&#39;)
+</code></pre></div>
+<h3 id="step-3-duplex-formation">Step 3: Duplex Formation</h3>
+<p>When a match is found, base pairing occurs:</p>
+<div class="highlight"><pre><span></span><code>microRNA:  5&#39;- U GUA ACG UGC GA -3&#39;
+           ··· ││||::│││││ ··
+mRNA:      3&#39;- A CAU UGC ACG CU -5&#39;
+
+│ = Watson-Crick pair (strong)
+: = Wobble pair (G-U, weaker)
+· = Mismatch (no pairing)
+</code></pre></div>
+<h3 id="step-4-functional-outcome">Step 4: Functional Outcome</h3>
+<p>Once bound, the microRNA-mRNA complex:
+- 🛑 Recruits degradation machinery
+- 🔇 Silences translation
+- ⚡ Reduces protein levels
+- 📉 Effectively "turns off" the gene</p>
+<hr />
+<h2 id="base-pairing-rules">Base Pairing Rules</h2>
+<h3 id="watson-crick-pairs-strong">Watson-Crick Pairs (Strong)</h3>
+<p>Standard RNA base pairing:</p>
+<div class="highlight"><pre><span></span><code>Adenine (A) pairs with Uracil (U):     A-U
+   ││  
+Guanine (G) pairs with Cytosine (C):   G-C
+   ││
+</code></pre></div>
+<p><strong>Characteristics</strong>:
+- ✅ Most stable
+- ✅ Standard geometry
+- ✅ Full score in binding calculations
+- ✅ Preferred by RISC complex</p>
+<p><strong>Example</strong>:
+<div class="highlight"><pre><span></span><code>microRNA: A
+mRNA:     U
+Result: Watson-Crick pair (score: 1.0)
+</code></pre></div></p>
+<h3 id="wobble-pairs-weaker">Wobble Pairs (Weaker)</h3>
+<p>Special non-standard pairing:</p>
+<div class="highlight"><pre><span></span><code>Guanine (G) can pair with Uracil (U):  G-U
+   :
+</code></pre></div>
+<p><strong>Characteristics</strong>:
+- ⚠️ Less stable than Watson-Crick
+- ⚠️ Non-standard geometry
+- ⚠️ Partial score in calculations
+- ✅ Biologically tolerated
+- ✅ Increases binding flexibility</p>
+<p><strong>Example</strong>:
+<div class="highlight"><pre><span></span><code>microRNA: G
+mRNA:     U
+Result: Wobble pair (score: 0.5)
+</code></pre></div></p>
+<h3 id="no-pairing-mismatch">No Pairing (Mismatch)</h3>
+<div class="highlight"><pre><span></span><code>Adenine (A) with Cytosine (C):     A-C ✗
+</code></pre></div>
+<p><strong>Meaning</strong>:
+- ❌ Cannot pair
+- ❌ Mismatch
+- ❌ No contribution to binding strength
+- ✅ Allowed in supplementary regions</p>
+<hr />
+<h2 id="seed-region-specificity">Seed Region Specificity</h2>
+<h3 id="why-seed-matters-most">Why Seed Matters Most</h3>
+<p>The seed determines target selection:</p>
+<div class="highlight"><pre><span></span><code>Position:        1  2  3  4  5  6  7  8  9 10...
+microRNA:        U  G  U  A  A  C  G  U  G  C
+                    └──seed (2-7)──┘
+                 MUST match exactly!
+</code></pre></div>
+<p><strong>The seed requirement</strong>:
+- ✅ Positions 2-7 MUST be complementary
+- ✅ This narrowing is what gives specificity
+- ✅ Thousands of mRNAs, but correct seed matches are rare
+- ✅ Even one mismatch in seed = no binding</p>
+<h3 id="alternative-seed-definitions">Alternative Seed Definitions</h3>
+<p>Researchers sometimes use:
+- <strong>2-7</strong>: Standard (6 nt) - most common
+- <strong>2-8</strong>: Extended (7 nt) - more stringent
+- <strong>1-8</strong>: Strictest (8 nt) - highest specificity
+- <strong>2-6</strong>: Relaxed (5 nt) - more permissive</p>
+<p>This tool uses <strong>2-7 by default</strong> but allows configuration.</p>
+<hr />
+<h2 id="supplementary-pairing">Supplementary Pairing</h2>
+<h3 id="beyond-the-seed">Beyond the Seed</h3>
+<p>After the seed matches, additional nucleotides may pair:</p>
+<div class="highlight"><pre><span></span><code>microRNA:  5&#39;- U GGUAACGUGCGACAC UAA -3&#39;
+Position:     1  2345678910111213141516171819...
+Seed (2-7):     └─required─┘
+Extra pairing:       └────optional─────┘
+
+Outside seed (1, 8-22):
+- Not required for binding
+- But strengthen the interaction
+- Show in results as &quot;Other Pairs&quot;
+</code></pre></div>
+<h3 id="impact-of-supplementary-pairs">Impact of Supplementary Pairs</h3>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seed only, no extra</td>
+<td>Weak binding, may not be functional</td>
+</tr>
+<tr>
+<td>Seed + some extra</td>
+<td>Moderate binding, likely functional</td>
+</tr>
+<tr>
+<td>Seed + extra pairing</td>
+<td>Strong binding, likely functional</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scoring-system">Scoring System</h3>
+<div class="highlight"><pre><span></span><code>Total Score = (WC pairs × 1.0) + (Wobble pairs × 0.5)
+
+Example 1 (strong):
+  Watson-Crick: 16 pairs × 1.0 = 16.0
+  Wobble: 2 pairs × 0.5 = 1.0
+  Total: 17.0 (strong)
+
+Example 2 (weak):
+  Watson-Crick: 6 pairs × 1.0 = 6.0
+  Wobble: 0 pairs × 0.5 = 0
+  Total: 6.0 (weak)
+</code></pre></div>
+<hr />
+<h2 id="3utr-importance">3'UTR Importance</h2>
+<h3 id="why-only-3utr">Why Only 3'UTR?</h3>
+<p>microRNAs bind specifically to 3'UTR because:</p>
+<div class="highlight"><pre><span></span><code>5&#39; cap ─── 5&#39;UTR ─── CDS ─── 3&#39;UTR ─── poly(A)
+                   (protein code)
+         Blocked:          ✅ Accessible:
+         - In translation   - Post-transcriptional
+         - Ribosome there    - Exposed to RISC
+         - Not accessible   - Regulatory purpose
+</code></pre></div>
+<h3 id="accessibility">Accessibility</h3>
+<ul>
+<li><strong>Coding sequence</strong>: Ribosome blocking access (physically)</li>
+<li><strong>3'UTR</strong>: Free to interact with regulatory proteins</li>
+<li><strong>Ribosome</strong>: Only reads 5'UTR through CDS</li>
+<li><strong>RISC complex</strong>: Finds microRNAs in 3'UTR</li>
+</ul>
+<h3 id="regulatory-effect">Regulatory Effect</h3>
+<p>microRNA binding to 3'UTR causes:
+1. <strong>mRNA destabilization</strong>: Triggers degradation
+2. <strong>Translation block</strong>: Prevents protein synthesis
+3. <strong>Overall effect</strong>: Reduced protein levels</p>
+<hr />
+<h2 id="biological-reality">Biological Reality</h2>
+<h3 id="how-many-micrornas-target-one-gene">How Many microRNAs Target One Gene?</h3>
+<p>Typical mRNA is targeted by <strong>5-20 different microRNAs</strong>:</p>
+<div class="highlight"><pre><span></span><code>mRNA 3&#39;UTR:
+┌─ microRNA A site ─┬─ microRNA B site ─┬─ microRNA C site ┬─...
+│ CCGAUGC           │ GCAUU              │ ACGUAG            │
+└──────────────────┴───────────────────┴────────────────────┴─...
+</code></pre></div>
+<p><strong>Result</strong>:
+- Multiple regulatory pathways
+- Combinatorial control
+- Gene expression fine-tuning
+- Multiple regulatory pathways</p>
+<h3 id="one-microrna-targets-multiple-genes">One microRNA Targets Multiple Genes</h3>
+<p>A single microRNA targets <strong>200-300 different mRNAs</strong>:</p>
+<div class="highlight"><pre><span></span><code>mir-30a ┬─→ mRNA 1 → Protein 1 ↓
+        ├─→ mRNA 2 → Protein 2 ↓
+        ├─→ mRNA 3 → Protein 3 ↓
+        └─→ ... 200+ targets
+</code></pre></div>
+<p><strong>Result</strong>:
+- Coordinated gene silencing
+- Pathway-level effects
+- Disease involvement when dysregulated
+- Central in gene regulatory networks</p>
+<h3 id="examples-of-biological-importance">Examples of Biological Importance</h3>
+<table>
+<thead>
+<tr>
+<th>microRNA</th>
+<th>Targets</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>let-7</td>
+<td>Oncogenes</td>
+<td>Tumor suppression</td>
+</tr>
+<tr>
+<td>mir-122</td>
+<td>Viral RNA</td>
+<td>Antiviral defense</td>
+</tr>
+<tr>
+<td>mir-29</td>
+<td>Collagen</td>
+<td>ECM regulation</td>
+</tr>
+<tr>
+<td>mir-200</td>
+<td>E-cadherin</td>
+<td>Epithelial-mesenchymal transition</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="when-this-tool-is-used">When This Tool Is Used</h2>
+<h3 id="in-research">In Research</h3>
+<ol>
+<li><strong>Validation</strong>: Confirm predicted interactions</li>
+<li><strong>Discovery</strong>: Find new targets for genes of interest</li>
+<li><strong>Network analysis</strong>: Map regulatory pathways</li>
+<li><strong>Drug development</strong>: Identify therapeutic targets</li>
+</ol>
+<h3 id="in-diagnosis">In Diagnosis</h3>
+<ol>
+<li><strong>Biomarkers</strong>: Dysregulated microRNAs indicate disease</li>
+<li><strong>Classification</strong>: microRNA signatures classify cancer subtypes</li>
+<li><strong>Prognosis</strong>: microRNA levels predict outcomes</li>
+</ol>
+<h3 id="in-development">In Development</h3>
+<ol>
+<li><strong>Gene regulation</strong>: microRNAs control developmental timing</li>
+<li><strong>Differentiation</strong>: Control cell fate decisions</li>
+<li><strong>Homeostasis</strong>: Maintain cellular stability</li>
+</ol>
+<hr />
+<h2 id="assumptions-limitations">Assumptions &amp; Limitations</h2>
+<h3 id="this-tool-assumes">This Tool Assumes</h3>
+<p>✅ Watson-Crick pairing follows standard rules<br />
+✅ Wobble G-U pairs are possible<br />
+✅ Seed region (2-7) is most critical<br />
+✅ Accessibility is sufficient in 3'UTR<br />
+✅ RNA sequences are correctly provided  </p>
+<h3 id="what-this-tool-does-not-include">What This Tool Does NOT Include</h3>
+<p>❌ mRNA secondary structure (can block access)<br />
+❌ Protein binding sites (compete with microRNAs)<br />
+❌ Cellular localization effects<br />
+❌ Tissue-specific expression patterns<br />
+❌ Thermodynamic free energy calculations<br />
+❌ Evolutionary conservation  </p>
+<h3 id="real-world-complexity">Real-World Complexity</h3>
+<p>Actual microRNA function depends on:
+- 📍 mRNA secondary structure
+- 🔬 Protein-RNA interactions
+- 🧬 Sequence context effects
+- ⏰ Cellular conditions
+- 🔄 Competition with other molecules</p>
+<p><strong>Bottom Line</strong>: This tool identifies <em>potential</em> binding sites. Experimental validation is recommended for important findings.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../assets/js/google-analytics.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2111 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A tool for identifying microRNA binding sites on target mRNA sequences">
+      
+      
+        <meta name="author" content="Your Team Name">
+      
+      
+        <link rel="canonical" href="https://yoursite.com/features/dynamite_mode/">
+      
+      
+        <link rel="prev" href="../matching_mode/">
+      
+      
+        <link rel="next" href="../../concepts/biology/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Dynamite Mode (Database Scan) - DynamiR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-W20WZ887RV"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-W20WZ887RV",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-W20WZ887RV",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dynamite-mode-database-scanning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DynamiR" class="md-header__button md-logo" aria-label="DynamiR" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DynamiR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dynamite Mode (Database Scan)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/getting_started/" class="md-tabs__link">
+          
+  
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../matching_mode/" class="md-tabs__link">
+          
+  
+  
+  Features
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/biology/" class="md-tabs__link">
+          
+  
+  
+  Understanding
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DynamiR" class="md-nav__button md-logo" aria-label="DynamiR" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    DynamiR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matching_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matching Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamite Mode (Database Scan)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamite Mode (Database Scan)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-dynamite-mode-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Dynamite Mode Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Dynamite Mode Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing Timeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-Step Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-input-target-mrna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Input: Target mRNA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Input: Target mRNA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-genbank-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: GenBank ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-genbank-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: GenBank File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-fasta-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: FASTA File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-d-direct-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option D: Direct Sequence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-input-seed-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Input: Seed Region
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-run-full-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Run Full Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-monitor-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Monitor Progress
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#result-table-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Table Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-explanations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Column Explanations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-ranking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Ranking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-high-results-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What High Results Mean
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What High Results Mean">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-top-binders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Top Binders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-strong-binder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single Strong Binder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-biology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the Biology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the Biology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-multiple-binders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Multiple Binders?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-a-good-binder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Makes a Good Binder?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed-region-importance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seed Region Importance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparing-different-seed-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing Different Seed Regions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-specific-micrornas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding Specific microRNAs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focusing-on-3utr-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focusing on 3'UTR Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips &amp; Tricks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips &amp; Tricks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimize-your-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Optimize Your Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-up-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ Speed Up Scanning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpret-thoroughly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Interpret Thoroughly
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-let-7-family-dominance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 1: Let-7 Family Dominance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-mixed-families" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 2: Mixed Families
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-single-clear-winner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 3: Single Clear Winner
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Understanding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/biology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biological Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/how_it_works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How It Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-dynamite-mode-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Dynamite Mode Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Dynamite Mode Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing Timeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-Step Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-input-target-mrna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Input: Target mRNA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Input: Target mRNA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-genbank-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: GenBank ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-genbank-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: GenBank File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-fasta-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: FASTA File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-d-direct-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option D: Direct Sequence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-input-seed-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Input: Seed Region
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-run-full-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Run Full Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-monitor-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Monitor Progress
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#result-table-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Table Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-explanations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Column Explanations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-ranking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Ranking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-high-results-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What High Results Mean
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What High Results Mean">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-top-binders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Top Binders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-strong-binder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single Strong Binder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-biology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the Biology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the Biology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-multiple-binders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Multiple Binders?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-a-good-binder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Makes a Good Binder?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed-region-importance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seed Region Importance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparing-different-seed-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing Different Seed Regions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-specific-micrornas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding Specific microRNAs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focusing-on-3utr-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focusing on 3'UTR Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips &amp; Tricks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips &amp; Tricks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimize-your-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Optimize Your Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-up-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ Speed Up Scanning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpret-thoroughly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Interpret Thoroughly
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-let-7-family-dominance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 1: Let-7 Family Dominance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-mixed-families" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 2: Mixed Families
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-single-clear-winner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 3: Single Clear Winner
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dynamite-mode-database-scanning">Dynamite Mode - Database Scanning</h1>
+<h2 id="overview">Overview</h2>
+<p><strong>Dynamite Mode</strong> scans your target mRNA against a <strong>database of ~48,860 known microRNAs</strong> to identify ALL possible microRNA regulators in a single analysis.</p>
+<p>Perfect for:
+- ✅ Discovery: Find unknown microRNA regulators
+- ✅ Exploration: Screen all possibilities at once
+- ✅ Research: Identify potential regulatory networks
+- ✅ Ranking: See which microRNAs are strongest binders</p>
+<hr />
+<h2 id="how-dynamite-mode-works">How Dynamite Mode Works</h2>
+<h3 id="the-algorithm">The Algorithm</h3>
+<div class="highlight"><pre><span></span><code>Input: mRNA sequence + Seed region
+
+For each of the ~48,860 microRNAs in database:
+    1. Extract seed region (positions 2-7)
+    2. Reverse complement it
+    3. Search entire mRNA for matches
+    4. If found:
+        - Calculate full duplex alignment
+        - Score all Watson-Crick pairs
+        - Count wobble pairs
+        - Compute binding strength %
+    5. Store result with ranking score
+
+Output: Sorted table (best to weakest binders)
+</code></pre></div>
+<h3 id="processing-timeline">Processing Timeline</h3>
+<div class="highlight"><pre><span></span><code>Start scanning...
+10% — Estimated time remaining ~ 8.5 s
+20% — Estimated time remaining ~ 7.2 s
+...
+100% — COMPLETE!
+
+Results: 47 microRNAs can bind your mRNA
+</code></pre></div>
+<hr />
+<h2 id="step-by-step-analysis">Step-by-Step Analysis</h2>
+<h3 id="1-input-target-mrna">1️⃣ Input: Target mRNA</h3>
+<p>Choose how to provide the mRNA:</p>
+<h4 id="option-a-genbank-id">Option A: GenBank ID</h4>
+<p><div class="highlight"><pre><span></span><code>Select: ⊙ GenBank ID
+Enter: NM_008539
+</code></pre></div>
+<strong>Fetches from</strong>: NCBI Entrez<br />
+<strong>Auto-extracts</strong>: 3'UTR region<br />
+<strong>Best for</strong>: Known genes with published annotations</p>
+<h4 id="option-b-genbank-file">Option B: GenBank File</h4>
+<p><div class="highlight"><pre><span></span><code>Select: ⊙ File
+Choose: [Browse] → gene.gb
+</code></pre></div>
+<strong>Format</strong>: GenBank file (.gb, .gbk)<br />
+<strong>Auto-extracts</strong>: 3'UTR from CDS annotation<br />
+<strong>Best for</strong>: Local data, custom annotations</p>
+<h4 id="option-c-fasta-file">Option C: FASTA File</h4>
+<p><div class="highlight"><pre><span></span><code>Select: ⊙ File
+Choose: [Browse] → sequence.fa
+</code></pre></div>
+<strong>Format</strong>: FASTA file (.fa, .fasta)<br />
+<strong>Note</strong>: Uses entire sequence (you manage content)<br />
+<strong>Best for</strong>: Already-prepared 3'UTR sequences</p>
+<h4 id="option-d-direct-sequence">Option D: Direct Sequence</h4>
+<p><div class="highlight"><pre><span></span><code>Select: ⊙ Sequence
+Paste: AUGAAACGCGAGCGACGAGC...
+</code></pre></div>
+<strong>Format</strong>: Plain text<br />
+<strong>Best for</strong>: Quick screening of short regions</p>
+<hr />
+<h3 id="2-input-seed-region">2️⃣ Input: Seed Region</h3>
+<p>Specify the seed region criteria:</p>
+<div class="highlight"><pre><span></span><code>Seed: 2-7
+</code></pre></div>
+<p>Choose from:
+- <strong>2-7</strong>: Standard (most commonly used)
+- <strong>2-8</strong>: More stringent (higher specificity)
+- <strong>1-8</strong>: Strictest (lowest false positives)
+- <strong>2-6</strong>: Permissive (more candidates)</p>
+<p>See <a href="../matching_mode/">Matching Mode</a> for detailed explanation.</p>
+<hr />
+<h3 id="3-run-full-scan">3️⃣ Run Full Scan</h3>
+<p>Click <strong>[ Parse ]</strong> button</p>
+<p><strong>What Happens</strong>:
+1. Validates mRNA input
+2. Opens database (~48,860 microRNAs)
+3. Tests each microRNA against your mRNA
+4. Progress window shows real-time status
+5. Computes results in background (non-blocking UI)
+6. Displays sorted results when complete</p>
+<p><strong>Typical Duration</strong>: 5-10 seconds</p>
+<hr />
+<h3 id="4-monitor-progress">4️⃣ Monitor Progress</h3>
+<p>A progress window appears:</p>
+<p><img alt="Scanning Progress Popup" src="../../assets/images/image11.png" style="max-width: 350px;" /></p>
+<p><strong>What it shows</strong>:
+- Percentage of database scanned
+- Visual progress bar
+- Estimated time to completion
+- Updated in real-time</p>
+<p><strong>During scanning</strong>:
+- ✅ Main window stays responsive
+- ✅ You can view previous results
+- ✅ Cannot start new scan until complete</p>
+<hr />
+<h2 id="understanding-results">Understanding Results</h2>
+<h3 id="result-table-format">Result Table Format</h3>
+<p><img alt="Scanning Progress Popup" src="../../assets/images/image14.png" style="max-width: 550px;" /></p>
+<h3 id="column-explanations">Column Explanations</h3>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Accession</strong></td>
+<td>microRNA ID (miRBase)</td>
+<td>MIMAT0000062</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td>Total pairing strength</td>
+<td>15.5 (higher = better)</td>
+</tr>
+<tr>
+<td><strong>Seed</strong></td>
+<td>Positions used for search</td>
+<td>2-7 (as specified)</td>
+</tr>
+<tr>
+<td><strong>Bound</strong></td>
+<td>Total nucleotides paired</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Bind%</strong></td>
+<td>Percentage of microRNA that pairs</td>
+<td>80%</td>
+</tr>
+<tr>
+<td><strong>Position</strong></td>
+<td>Where binding starts in mRNA</td>
+<td>450</td>
+</tr>
+<tr>
+<td><strong>Length</strong></td>
+<td>microRNA sequence length</td>
+<td>22 nucleotides</td>
+</tr>
+<tr>
+<td><strong>microRNA Seq</strong></td>
+<td>Actual seed sequence</td>
+<td>CUGGGCAACAUAGCGAGACCCC</td>
+</tr>
+<tr>
+<td><strong>Other Pairs</strong></td>
+<td>Positions with pairs outside seed</td>
+<td>8-12,14-16</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="result-ranking">Result Ranking</h3>
+<p>Results are <strong>automatically sorted</strong> by:</p>
+<ol>
+<li><strong>Primary</strong>: Score (highest first) = strongest binders</li>
+<li><strong>Secondary</strong>: Binding % (highest first) = most coverage</li>
+</ol>
+<p><strong>What this means</strong>:
+- ✅ Top results are most likely genuine binders
+- ✅ Each result represents a possible regulator
+- ✅ You can quickly identify top candidates</p>
+<hr />
+<h2 id="what-high-results-mean">What High Results Mean</h2>
+<h3 id="multiple-top-binders">Multiple Top Binders</h3>
+<p><div class="highlight"><pre><span></span><code>Results: 47 microRNAs might3 bind your mRNA
+Top 10 shown above...
+</code></pre></div>
+<strong>Meaning</strong>:
+- mRNA is heavily regulated
+- Multiple regulatory pathways
+- Target gene is biologically important
+- Complex regulatory network</p>
+<p><strong>Implication</strong>: Important for gene expression control</p>
+<h3 id="single-strong-binder">Single Strong Binder</h3>
+<p><div class="highlight"><pre><span></span><code>Results: 3 microRNAs can bind your mRNA
+Only 1 with good score...
+</code></pre></div>
+<strong>Meaning</strong>:
+- Specific microRNA-mRNA pair
+- Clear regulatory relationship
+- Primary regulator identified
+- Simpler network</p>
+<p><strong>Implication</strong>: Primary regulatory mechanism identified</p>
+<h3 id="no-results">No Results</h3>
+<p><div class="highlight"><pre><span></span><code>No microRNA binding sites found with these parameters
+</code></pre></div>
+<strong>Possible Meanings</strong>:
+- This mRNA isn't microRNA-regulated
+- All matches are weak/non-specific
+- Wrong seed region
+- mRNA not in 3'UTR format</p>
+<p><strong>Troubleshooting</strong>: Try different seed (2-8, 2-6)</p>
+<hr />
+<h2 id="exporting-results">Exporting Results</h2>
+<p>Click <strong>💾</strong> button in top-right corner</p>
+<p><strong>What gets saved</strong>:
+- Complete results table
+- All statistics
+- Input parameters
+- Analysis timestamp</p>
+<p><strong>Format</strong>: Plain text file (.txt)<br />
+<strong>Default name</strong>: <code>dynamite_results.txt</code></p>
+<p><strong>Use</strong>: Archive, sharing, further analysis</p>
+<hr />
+<h2 id="understanding-the-biology">Understanding the Biology</h2>
+<h3 id="why-multiple-binders">Why Multiple Binders?</h3>
+<p>Many genes are regulated by multiple microRNAs:
+- <strong>Diversity</strong>: Different cellular conditions
+- <strong>Redundancy</strong>: Multiple regulatory pathways
+- <strong>Specificity</strong>: Different targeting combinations
+- <strong>Fine-tuning</strong>: Gradual expression adjustment</p>
+<h3 id="what-makes-a-good-binder">What Makes a Good Binder?</h3>
+<ol>
+<li><strong>Seed perfect match</strong> (positions 2-7)</li>
+<li><strong>Additional pairing</strong> (strengthens binding)</li>
+<li><strong>Energetically favorable</strong> (stable duplex)</li>
+<li><strong>In 3'UTR region</strong> (accessible location)</li>
+</ol>
+<h3 id="seed-region-importance">Seed Region Importance</h3>
+<ul>
+<li><strong>Seed (2-7)</strong>: MUST match exactly</li>
+<li><strong>Position 1 &amp; 8+</strong>: Extra pairing, bonus stability</li>
+<li><strong>Perfect alignment</strong>: Not typically required</li>
+<li><strong>Wobble pairs</strong>: Acceptable, weaken binding slightly</li>
+</ul>
+<hr />
+<h2 id="advanced-usage">Advanced Usage</h2>
+<h3 id="comparing-different-seed-regions">Comparing Different Seed Regions</h3>
+<p>Run analysis 3 times:
+1. Seed 2-7 (standard)
+2. Seed 2-8 (stringent)
+3. Seed 2-6 (permissive)</p>
+<p>Compare results:
+- <strong>2-7</strong>: Balanced hit rate
+- <strong>2-8</strong>: Fewer results, higher confidence
+- <strong>2-6</strong>: More results, include marginal binders</p>
+<h3 id="finding-specific-micrornas">Finding Specific microRNAs</h3>
+<p>Results are sorted by score. To find a specific microRNA:
+1. Run Dynamite scan
+2. Export results
+3. Search exported file for microRNA name/ID
+4. Note its rank and score</p>
+<h3 id="focusing-on-3utr-analysis">Focusing on 3'UTR Analysis</h3>
+<p>Best practice:
+1. Use GenBank ID (auto-extracts 3'UTR)
+2. Or provide GenBank file
+3. Ensures biological relevance
+4. Avoid false positives in coding region</p>
+<hr />
+<h2 id="tips-tricks">Tips &amp; Tricks</h2>
+<h3 id="optimize-your-analysis">🎯 Optimize Your Analysis</h3>
+<ol>
+<li><strong>Start with 2-7 seed</strong> - most balanced</li>
+<li><strong>Review top 5 results</strong> - usually most relevant</li>
+<li><strong>Check positions</strong> - biological plausibility</li>
+<li><strong>Use GenBank IDs</strong> - automatic 3'UTR extraction</li>
+</ol>
+<h3 id="speed-up-scanning">⚡ Speed Up Scanning</h3>
+<ol>
+<li><strong>Pre-filter sequences</strong> - shorter = faster</li>
+<li><strong>Use 2-8 seed</strong> - slightly fewer matches = faster</li>
+<li><strong>Local files</strong> - faster than downloading IDs</li>
+</ol>
+<h3 id="interpret-thoroughly">🔍 Interpret Thoroughly</h3>
+<ol>
+<li><strong>Top 3-5 results</strong> - most trustworthy</li>
+<li><strong>Position analysis</strong> - check if in 3'UTR</li>
+<li><strong>Known interactions</strong> - validate against literature</li>
+<li><strong>Binding strength</strong> - score correlates with strength</li>
+</ol>
+<hr />
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="pattern-1-let-7-family-dominance">Pattern 1: Let-7 Family Dominance</h3>
+<div class="highlight"><pre><span></span><code>Top results include multiple let-7 family members
+Indicates: Strong conservation, common target
+</code></pre></div>
+<h3 id="pattern-2-mixed-families">Pattern 2: Mixed Families</h3>
+<div class="highlight"><pre><span></span><code>Results from diverse microRNA families
+Indicates: Complex regulation, developmental importance
+</code></pre></div>
+<h3 id="pattern-3-single-clear-winner">Pattern 3: Single Clear Winner</h3>
+<div class="highlight"><pre><span></span><code>One microRNA far above others
+Indicates: Specific primary regulator
+</code></pre></div>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Q: Why is analysis slow?</strong><br />
+A: Scanning 48,860 microRNAs takes time. Typical: 1-5 minutes. Be patient!</p>
+<p><strong>Q: Can I get results in different order?</strong><br />
+A: Results are always sorted by score. Export to .txt to manipulate manually.</p>
+<p><strong>Q: What if I get too many results?</strong><br />
+A: Try seed 2-8 (more stringent). Or manually filter high-score results.</p>
+<p><strong>Q: Can I search subset of microRNAs?</strong><br />
+A: Currently scans full database. Use Matching mode for specific microRNAs.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../assets/js/google-analytics.js"></script>
+      
+    
+  </body>
+</html>

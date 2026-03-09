@@ -1,0 +1,53 @@
+site_name: DynamiR
+site_description: A tool for identifying microRNA binding sites on target mRNA sequences
+site_author: Your Team Name
+site_url: https://yoursite.com/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  logo: assets/images/logo.png
+  favicon: assets/images/logo.png
+  custom_dir: docs/overrides
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+
+extra_javascript:
+  - assets/js/google-analytics.js
+
+extra:
+  analytics:
+    provider: google
+    property: G-W20WZ887RV
+
+nav:
+  - Home: index.md
+  - Documentation:
+    - Getting Started: guide/getting_started.md
+    - Installation: guide/installation.md
+  - Features:
+    - Matching Mode: features/matching_mode.md
+    - Dynamite Mode (Database Scan): features/dynamite_mode.md
+  - Understanding:
+    - Biological Concepts: concepts/biology.md
+    - How It Works: concepts/how_it_works.md
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - tables
+  - toc

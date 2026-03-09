@@ -1,0 +1,2713 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A tool for identifying microRNA binding sites on target mRNA sequences">
+      
+      
+        <meta name="author" content="Your Team Name">
+      
+      
+        <link rel="canonical" href="https://yoursite.com/concepts/how_it_works/">
+      
+      
+        <link rel="prev" href="../biology/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>How It Works - DynamiR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-W20WZ887RV"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-W20WZ887RV",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-W20WZ887RV",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-it-works" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DynamiR" class="md-header__button md-logo" aria-label="DynamiR" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DynamiR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How It Works
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/getting_started/" class="md-tabs__link">
+          
+  
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../features/matching_mode/" class="md-tabs__link">
+          
+  
+  
+  Features
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../biology/" class="md-tabs__link">
+          
+  
+  
+  Understanding
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DynamiR" class="md-nav__button md-logo" aria-label="DynamiR" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    DynamiR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/matching_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matching Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/dynamite_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamite Mode (Database Scan)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Understanding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biological Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How It Works
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How It Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-launch-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Launch Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-provide-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Provide Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-select-analysis-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Select Analysis Mode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Select Analysis Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mode-a-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode A: Matching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-b-dynamite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode B: Dynamite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-configure-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Configure Search
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-run-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Run Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-view-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: View Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: View Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matching-mode-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matching Mode Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamite-mode-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamite Mode Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-export-or-analyze-further" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Export or Analyze Further
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matching-mode-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matching Mode Deep Dive
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matching Mode Deep Dive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamite-mode-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamite Mode Deep Dive
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamite Mode Deep Dive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-dynamite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why "Dynamite"?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-algorithm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-use-cases_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-the-two-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing the Two Modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparing the Two Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#side-by-side-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Side-by-Side Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Each
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Use Each">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-matching-mode-when" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Matching Mode When...
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-dynamite-mode-when" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Dynamite Mode When...
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typical Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Sources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microrna-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        microRNA Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Data Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genbank-file-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GenBank File Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Interpretation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Result Interpretation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Scores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binding-strength-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binding Strength Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed-only-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seed-Only Matches
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-this-tool-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What This Tool Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-this-tool-does-not-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What This Tool Does NOT Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-biology-is-more-complex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real Biology Is More Complex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-launch-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Launch Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-provide-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Provide Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-select-analysis-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Select Analysis Mode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Select Analysis Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mode-a-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode A: Matching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-b-dynamite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode B: Dynamite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-configure-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Configure Search
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-run-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Run Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-view-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: View Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: View Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matching-mode-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matching Mode Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamite-mode-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamite Mode Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-export-or-analyze-further" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Export or Analyze Further
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matching-mode-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matching Mode Deep Dive
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matching Mode Deep Dive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamite-mode-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamite Mode Deep Dive
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamite Mode Deep Dive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-dynamite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why "Dynamite"?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-algorithm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-use-cases_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-the-two-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing the Two Modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparing the Two Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#side-by-side-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Side-by-Side Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Each
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Use Each">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-matching-mode-when" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Matching Mode When...
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-dynamite-mode-when" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Dynamite Mode When...
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typical Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Sources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microrna-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        microRNA Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Data Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genbank-file-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GenBank File Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Interpretation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Result Interpretation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Scores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binding-strength-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binding Strength Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed-only-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seed-Only Matches
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-this-tool-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What This Tool Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-this-tool-does-not-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What This Tool Does NOT Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-biology-is-more-complex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real Biology Is More Complex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="how-it-works">How It Works</h1>
+<h2 id="system-overview">System Overview</h2>
+<p>DynamiR provides a system for analyzing how microRNAs interact with mRNA sequences. This page explains the overall workflow and how the two analysis modes work together.</p>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────────────────────┐
+│                     DynamiR                             │
+│                                                         │
+│  Input: microRNA + mRNA → Analysis → Results          │
+│                                                         │
+│  Two Analysis Modes:                                    │
+│  1. Matching Mode: Direct analysis                     │
+│  2. Dynamite Mode: Database scanning                   │
+└─────────────────────────────────────────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="complete-workflow">Complete Workflow</h2>
+<h3 id="step-1-launch-application">Step 1: Launch Application</h3>
+<p>User runs <code>projet.py</code> which starts the graphical interface:</p>
+<div class="highlight"><pre><span></span><code>projet.py
+   ↓
+gui_frontend.py (Main Window)
+   ├─ Input Panel (left)
+   ├─ Output Panel (right)
+   └─ Mode Selection (top)
+</code></pre></div>
+<h3 id="step-2-provide-input">Step 2: Provide Input</h3>
+<p>User specifies sequences in three possible ways:</p>
+<div class="highlight"><pre><span></span><code>Input Option 1: Database ID
+  Example: &quot;let-7a-1&quot; or GenBank &quot;NM_004317&quot;
+  Source: NCBI/GenBank lookup
+  Result: Automatic sequence fetch
+
+Input Option 2: File Upload
+  Example: FASTA file or GenBank file
+  Source: User&#39;s local files
+  Result: Parse sequences from file
+
+Input Option 3: Direct Sequence
+  Example: Paste FASTA-formatted text
+  Source: Direct user input
+  Result: Use provided sequence as-is
+</code></pre></div>
+<h3 id="step-3-select-analysis-mode">Step 3: Select Analysis Mode</h3>
+<p>User chooses what to analyze:</p>
+<h4 id="mode-a-matching">Mode A: Matching</h4>
+<div class="highlight"><pre><span></span><code>Purpose: Direct Analysis
+Input:   microRNA + mRNA (user provides both)
+Process: Compare seed region to find binding sites
+Output:  List of all matches with scores
+Time:    Fast (seconds)
+</code></pre></div>
+<h4 id="mode-b-dynamite">Mode B: Dynamite</h4>
+<div class="highlight"><pre><span></span><code>Purpose: Database Scanning
+Input:   mRNA only (database provides microRNAs)
+Process: Scan all ~48,860 microRNAs in database
+Output:  Ranked list of which microRNAs bind
+Time:    Slow (minutes)
+</code></pre></div>
+<h3 id="step-4-configure-search">Step 4: Configure Search</h3>
+<p>User optionally adjusts seed region:</p>
+<div class="highlight"><pre><span></span><code>Default: Positions 2-7 (6 nucleotides)
+Options: 2-6 (relaxed), 2-8 (strict), custom
+
+Example microRNA:
+5&#39;- U GUAACGUGCGACACUAA -3&#39;
+   Position numbers:
+   1 2345678910111213...
+     └seed region─┘
+</code></pre></div>
+<h3 id="step-5-run-analysis">Step 5: Run Analysis</h3>
+<p>User clicks "Run Analysis" button:</p>
+<div class="highlight"><pre><span></span><code>Matching Mode:
+  Input validation ✓
+  Seed region extracted ✓
+  Reverse complement created ✓
+  Search mRNA for matches ✓
+  Score all matches ✓
+  Display results ✓
+
+Dynamite Mode:
+  Input validation ✓
+  Database loaded ✓
+  Progress window opened ✓
+  For each microRNA (48,860):
+    - Extract seed region
+    - Search target mRNA
+    - Score any matches
+    - Store results
+  Display ranked results ✓
+</code></pre></div>
+<h3 id="step-6-view-results">Step 6: View Results</h3>
+<p>Results appear in output panel:</p>
+<h4 id="matching-mode-results">Matching Mode Results</h4>
+<div class="highlight"><pre><span></span><code>Alignment display:
+microRNA: 5&#39;- GUAACGUGCGACACUAA -3&#39;
+         ├──│││::││││││ ││ ├──
+mRNA:    3&#39;- CUUGCACGCUGUGAUU -5&#39;
+
+Statistics:
+- Watson-Crick pairs: 14
+- Wobble pairs: 2
+- Total score: 15.0
+- Binding strength: High
+- Position in mRNA: 123-140
+</code></pre></div>
+<h4 id="dynamite-mode-results">Dynamite Mode Results</h4>
+<div class="highlight"><pre><span></span><code>Ranked Results Table:
+Rank │ microRNA │ Position │ Score │ W-C │ Wobble
+──────┼──────────┼──────────┼───────┼─────┼────────
+  1  │ mir-30a  │ 456-473  │ 18.0  │ 16  │  2
+  2  │ mir-29b  │ 234-251  │ 17.5  │ 17  │  1
+  3  │ let-7a   │ 189-206  │ 16.0  │ 14  │  4
+...
+</code></pre></div>
+<h3 id="step-7-export-or-analyze-further">Step 7: Export or Analyze Further</h3>
+<p>User can:
+- 📊 View alignment details
+- 💾 Download results (CSV, text, FASTA)
+- 🔄 Run new analysis
+- 🔗 Export for further study</p>
+<hr />
+<h2 id="matching-mode-deep-dive">Matching Mode Deep Dive</h2>
+<h3 id="purpose">Purpose</h3>
+<p>Direct comparison of one specific microRNA with one specific mRNA. Use when you want to know: "Does THIS microRNA bind to THIS mRNA?"</p>
+<h3 id="workflow">Workflow</h3>
+<div class="highlight"><pre><span></span><code>User Input:
+├─ microRNA ID (or sequence)
+├─ mRNA ID (or sequence)
+└─ Seed region (optional, default 2-7)
+
+Process:
+├─ Fetch/parse sequences ✓
+├─ Extract microRNA seed ✓
+├─ Create reverse complement ✓
+├─ Search mRNA for matches ✓
+├─ Score all binding sites ✓
+└─ Rank by strength ✓
+
+Output:
+├─ Primary result (top match shown)
+├─ Alignment visualization
+├─ Binding statistics
+└─ Download option
+</code></pre></div>
+<h3 id="key-algorithm">Key Algorithm</h3>
+<ol>
+<li><strong>Extract seed</strong>: nucleotides 2-7 of microRNA</li>
+<li><strong>Reverse complement</strong>: Convert to DNA search format</li>
+<li><strong>Scan mRNA</strong>: Look for matching sequences in 3'UTR</li>
+<li><strong>Score matches</strong>: Calculate Watson-Crick + Wobble pairs</li>
+<li><strong>Rank results</strong>: Sort by binding strength</li>
+</ol>
+<h3 id="data-flow">Data Flow</h3>
+<div class="highlight"><pre><span></span><code>microRNA: let-7a
+     ↓
+Extract seed (2-7):
+&quot;GUAACG&quot;
+     ↓
+Reverse complement:
+&quot;CUUGC&quot;
+     ↓
+Search in mRNA sequence:
+&quot;...ACGCUUGCGCA...&quot;  ← Found!
+     ↓
+Extract context:
+&quot;...ACGCUUGCGCAUUU...&quot;
+     ↓
+Align with full microRNA:
+let-7a:    5&#39;- GGAGGUAGUAGGUUGGUUGUU -3&#39;
+mRNA:      3&#39;- UUCC   GAUCA    ACAACA -5&#39;
+     ↓
+Score: 14 W-C, 2 Wobble = 15.0
+     ↓
+Display result
+</code></pre></div>
+<h3 id="example-use-cases">Example Use Cases</h3>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Input</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Does mir-122 target HCV?"</td>
+<td>HCV mRNA + mir-122</td>
+<td>Position + strength</td>
+</tr>
+<tr>
+<td>"Where on 3'UTR?"</td>
+<td>3'UTR + microRNA</td>
+<td>Exact position in sequence</td>
+</tr>
+<tr>
+<td>"How strong is binding?"</td>
+<td>Both sequences</td>
+<td>Score + alignment</td>
+</tr>
+<tr>
+<td>"Multiple sites?"</td>
+<td>mRNA + microRNA</td>
+<td>All positions ranked</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="dynamite-mode-deep-dive">Dynamite Mode Deep Dive</h2>
+<h3 id="purpose_1">Purpose</h3>
+<p>Database screening of an mRNA target against all ~48,860 microRNAs. Use when you want to know: "Which microRNAs in the database can bind to THIS mRNA?"</p>
+<h3 id="workflow_1">Workflow</h3>
+<div class="highlight"><pre><span></span><code>User Input:
+├─ mRNA sequence (or ID)
+└─ Seed region (optional)
+
+Process:
+├─ Load database (~48,860 microRNAs) ✓
+├─ Parse mRNA sequence ✓
+├─ For each microRNA (serial scan):
+│  ├─ Extract seed region
+│  ├─ Search in target mRNA
+│  ├─ Score any matches
+│  └─ Record results
+└─ Sort by binding strength ✓
+
+Output:
+├─ Progress window (real-time)
+├─ Result table (all matches)
+├─ Export option
+└─ Ranking by score
+</code></pre></div>
+<h3 id="why-dynamite">Why "Dynamite"?</h3>
+<p>The name reflects the tool's purpose: screen an mRNA "target" against the entire database arsenal of microRNAs. Like scanning a target with dynamite, it finds everything that can "hit" the target.</p>
+<h3 id="key-algorithm_1">Key Algorithm</h3>
+<ol>
+<li><strong>Load database</strong>: Read all ~48,860 microRNA sequences</li>
+<li><strong>For each microRNA</strong>:</li>
+<li>Extract seed region (2-7)</li>
+<li>Search target mRNA for matches</li>
+<li>Score any matches found</li>
+<li>Store in results</li>
+<li><strong>Rank</strong>: Sort by highest score first</li>
+</ol>
+<h3 id="processing-flow">Processing Flow</h3>
+<div class="highlight"><pre><span></span><code>Target mRNA: &quot;ACGUACGUACGUACGU...&quot;
+
+Database search (48,860 microRNAs):
+
+mir-1:     Seed &quot;GUUAA&quot; → Not found
+mir-2:     Seed &quot;UCGAU&quot; → Not found
+mir-3:     Seed &quot;ACGUA&quot; → Found! Score: 12.0
+...
+mir-1500:  Seed &quot;GAUCA&quot; → Found! Score: 8.0
+
+Results:
+┌─ mir-3 (score 12.0)
+├─ mir-234 (score 11.5)
+├─ mir-789 (score 11.0)
+└─ ... sorted descending
+</code></pre></div>
+<h3 id="performance-characteristics">Performance Characteristics</h3>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database Size</td>
+<td>~48,860 microRNAs</td>
+</tr>
+<tr>
+<td>Analysis Target</td>
+<td>Single mRNA (3'UTR)</td>
+</tr>
+<tr>
+<td>Processing Time</td>
+<td>2-10 minutes (depends on mRNA length)</td>
+</tr>
+<tr>
+<td>Memory Usage</td>
+<td>~50MB (database + results)</td>
+</tr>
+<tr>
+<td>Result Size</td>
+<td>5-50 matches typically</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-use-cases_1">Example Use Cases</h3>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Input</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"What regulates this mRNA?"</td>
+<td>mRNA sequence</td>
+<td>All regulatory microRNAs ranked</td>
+</tr>
+<tr>
+<td>"Which microRNAs are involved?"</td>
+<td>Gene 3'UTR</td>
+<td>Predicted microRNA network</td>
+</tr>
+<tr>
+<td>"Strongest regulators?"</td>
+<td>3'UTR</td>
+<td>Top microRNAs by binding strength</td>
+</tr>
+<tr>
+<td>"Pathway regulators?"</td>
+<td>Pathway gene mRNA</td>
+<td>All pathway microRNA regulators</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="comparing-the-two-modes">Comparing the Two Modes</h2>
+<h3 id="side-by-side-comparison">Side-by-Side Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Matching Mode</th>
+<th>Dynamite Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Verify specific interaction</td>
+<td>Find all interactions</td>
+</tr>
+<tr>
+<td><strong>User Provides</strong></td>
+<td>microRNA + mRNA</td>
+<td>mRNA only</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>Not used</td>
+<td>All 48,860 microRNAs</td>
+</tr>
+<tr>
+<td><strong>Processing</strong></td>
+<td>Single comparison</td>
+<td>48,860 comparisons</td>
+</tr>
+<tr>
+<td><strong>Time</strong></td>
+<td>Seconds</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>One top result</td>
+<td>Ranked list</td>
+</tr>
+<tr>
+<td><strong>Question</strong></td>
+<td>"Does X bind Y?"</td>
+<td>"What binds Y?"</td>
+</tr>
+<tr>
+<td><strong>Use Case</strong></td>
+<td>Hypothesis testing</td>
+<td>Discovery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="when-to-use-each">When to Use Each</h3>
+<h4 id="use-matching-mode-when">Use Matching Mode When...</h4>
+<ul>
+<li>✅ You have a specific hypothesis</li>
+<li>✅ Testing one microRNA-mRNA pair</li>
+<li>✅ Want detailed alignment view</li>
+<li>✅ Need fast feedback</li>
+<li>✅ Validating known interactions</li>
+<li>✅ Teaching/learning mode</li>
+</ul>
+<h4 id="use-dynamite-mode-when">Use Dynamite Mode When...</h4>
+<ul>
+<li>✅ Discovering new regulators</li>
+<li>✅ Understanding gene regulation</li>
+<li>✅ Finding pathway microRNAs</li>
+<li>✅ Screening multiple candidates</li>
+<li>✅ Network analysis</li>
+<li>✅ All regulatory information needed</li>
+</ul>
+<h3 id="typical-workflow">Typical Workflow</h3>
+<div class="highlight"><pre><span></span><code>Step 1: Use Dynamite
+  &quot;Find all microRNAs targeting this gene&quot;
+  → Ranked list of candidates
+
+Step 2: Use Matching
+  &quot;Verify top candidate with full details&quot;
+  → Detailed alignment and scores
+
+Step 3: Interpret
+  &quot;Understand the biology&quot;
+  → Read alignment, check conservation, validate
+</code></pre></div>
+<hr />
+<h2 id="data-sources">Data Sources</h2>
+<h3 id="microrna-database">microRNA Database</h3>
+<ul>
+<li><strong>Source</strong>: EMBL microRNA sequences (miRNA.dat)</li>
+<li><strong>Content</strong>: ~1,500 human microRNA sequences</li>
+<li><strong>Format</strong>: EMBL flat file format</li>
+<li><strong>Sequences</strong>: Mature microRNA sequences</li>
+<li><strong>Coverage</strong>: Human miRNA set</li>
+<li><strong>Updated</strong>: Periodically from official sources</li>
+</ul>
+<h3 id="external-data-sources">External Data Sources</h3>
+<p>The tool can also access:</p>
+<ol>
+<li><strong>NCBI GenBank</strong></li>
+<li>Purpose: Fetch sequences by ID</li>
+<li>Examples: "NM_004317" (mRNA), "let-7a-1" (microRNA)</li>
+<li>
+<p>Connection: HTTPS via Biopython</p>
+</li>
+<li>
+<p><strong>User Files</strong></p>
+</li>
+<li>Format: FASTA or GenBank</li>
+<li>Purpose: Local sequence analysis</li>
+<li>No internet required</li>
+</ol>
+<h3 id="genbank-file-handling">GenBank File Handling</h3>
+<p>When user uploads GenBank files (.gb or .gbk):</p>
+<div class="highlight"><pre><span></span><code>GenBank file example:
+LOCUS NM_004317     1234 bp
+...
+FEATURES
+  source          1..1234
+  CDS             1..900
+  3&#39;UTR           901..1234
+
+Processing:
+1. Detect .gb/.gbk extension
+2. Load as GenBank format
+3. Extract 3&#39;UTR region (positions 901..1234)
+4. Use 3&#39;UTR for analysis
+</code></pre></div>
+<hr />
+<h2 id="result-interpretation">Result Interpretation</h2>
+<h3 id="understanding-scores">Understanding Scores</h3>
+<p>All binding sites scored by base-pair quality:</p>
+<div class="highlight"><pre><span></span><code>Score = (Watson-Crick pairs × 1.0) + (Wobble pairs × 0.5)
+
+Example:
+  16 Watson-Crick pairs × 1.0 = 16.0
+  +  2 Wobble pairs × 0.5 = 1.0
+  ─────────────────────────────
+  Total Score = 17.0
+</code></pre></div>
+<h3 id="binding-strength-classification">Binding Strength Classification</h3>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Strength</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14-22</td>
+<td>Very Strong</td>
+<td>Highly likely functional</td>
+</tr>
+<tr>
+<td>12-14</td>
+<td>Strong</td>
+<td>Probably functional</td>
+</tr>
+<tr>
+<td>10-12</td>
+<td>Moderate</td>
+<td>Might be functional</td>
+</tr>
+<tr>
+<td>8-10</td>
+<td>Weak</td>
+<td>Uncertain functionality</td>
+</tr>
+<tr>
+<td>6-8</td>
+<td>Very Weak</td>
+<td>Questionable</td>
+</tr>
+<tr>
+<td>&lt;6</td>
+<td>Minimal</td>
+<td>Seed-only matches</td>
+</tr>
+</tbody>
+</table>
+<h3 id="seed-only-matches">Seed-Only Matches</h3>
+<p>Some matches have only seed region pairing:</p>
+<div class="highlight"><pre><span></span><code>microRNA: 5&#39;- U GUAACGUGCGACACUAA -3&#39;
+             └seed─┘
+mRNA:     3&#39;- A CUUGCACGU...    -5&#39;
+             └seed─┘
+
+Result: 6 W-C (seed) + 0 others = score 6.0
+Meaning: Seed binds but little supplementary pairing
+Strength: Weak but biologically possible
+</code></pre></div>
+<hr />
+<h2 id="technical-details">Technical Details</h2>
+<h3 id="input-validation">Input Validation</h3>
+<p>The tool validates all inputs:</p>
+<div class="highlight"><pre><span></span><code>Sequence checks:
+✓ Only valid nucleotides (ACGTU)
+✓ Minimum length (8 nt minimum)
+✓ Format correct (FASTA if file)
+✓ ID found in database (if using ID)
+
+Error handling:
+✗ Invalid characters → Error message
+✗ Sequence too short → Error message
+✗ ID not found → Suggest alternatives
+✗ File format wrong → Error message
+</code></pre></div>
+<h3 id="processing-steps">Processing Steps</h3>
+<ol>
+<li><strong>Preprocessing</strong></li>
+<li>Load sequences</li>
+<li>Validate format</li>
+<li>
+<p>Extract regions (seed, 3'UTR)</p>
+</li>
+<li>
+<p><strong>Seed Extraction</strong></p>
+</li>
+<li>Get nucleotides 2-7</li>
+<li>Create reverse complement</li>
+<li>
+<p>Prepare for scanning</p>
+</li>
+<li>
+<p><strong>Scanning</strong></p>
+</li>
+<li>Slide seed across mRNA</li>
+<li>Check for matches</li>
+<li>
+<p>Record positions</p>
+</li>
+<li>
+<p><strong>Scoring</strong></p>
+</li>
+<li>Calculate Watson-Crick pairs</li>
+<li>Calculate Wobble pairs</li>
+<li>
+<p>Sum total score</p>
+</li>
+<li>
+<p><strong>Ranking</strong></p>
+</li>
+<li>Sort by score descending</li>
+<li>Assign positions</li>
+<li>
+<p>Prepare visualization</p>
+</li>
+<li>
+<p><strong>Output</strong></p>
+</li>
+<li>Format results</li>
+<li>Create alignments</li>
+<li>Enable export</li>
+</ol>
+<hr />
+<h2 id="limitations">Limitations</h2>
+<h3 id="what-this-tool-does">What This Tool Does</h3>
+<p>✅ Finds potential binding sites by sequence complementarity<br />
+✅ Scores binding site quality<br />
+✅ Visualizes alignments<br />
+✅ Exports results  </p>
+<h3 id="what-this-tool-does-not-do">What This Tool Does NOT Do</h3>
+<p>❌ Evaluate mRNA secondary structure<br />
+❌ Consider protein-RNA interactions<br />
+❌ Account for cellular localization<br />
+❌ Predict actual gene silencing efficiency<br />
+❌ Include thermodynamic calculations<br />
+❌ Assess evolutionary conservation  </p>
+<h3 id="real-biology-is-more-complex">Real Biology Is More Complex</h3>
+<div class="highlight"><pre><span></span><code>Predicted binding site  ≠  Actual functional interaction
+
+Factors beyond this tool:
+├─ mRNA forms hairpins blocking access
+├─ RNA-binding proteins compete
+├─ Subcellular localization differs
+├─ Seed region mutations in disease
+└─ Regulatory proteins enhance/block binding
+</code></pre></div>
+<h3 id="recommendations">Recommendations</h3>
+<ol>
+<li><strong>Always validate</strong> computationally predicted sites</li>
+<li><strong>Check conservation</strong> using alignment tools</li>
+<li><strong>Consider structure</strong> using RNA prediction tools</li>
+<li><strong>Perform experiments</strong> for important findings</li>
+<li><strong>Review literature</strong> for known interactions</li>
+</ol>
+<hr />
+<h2 id="architecture-summary">Architecture Summary</h2>
+<div class="highlight"><pre><span></span><code>┌───────────────────────────────────────────────────┐
+│         User Interface Layer (Tkinter)             │
+│  ├─ Main Window (gui_frontend.py)                 │
+│  ├─ Matching Tab (matching_tab.py)                │
+│  ├─ Dynamite Tab (dynamite_tab.py)                │
+│  ├─ Widgets (widgets.py)                          │
+│  └─ Loading Popup (loading_popup.py)              │
+├───────────────────────────────────────────────────┤
+│         Analysis Engine Layer (Backend)            │
+│  ├─ Sequence Analysis (stub_backend.py)           │
+│  ├─ Seed Extraction                               │
+│  ├─ Binding Site Detection                        │
+│  └─ Results Scoring                               │
+├───────────────────────────────────────────────────┤
+│         Utility Layer                              │
+│  ├─ File Readers (file_readers.py)                │
+│  │  ├─ FASTA parsing                              │
+│  │  ├─ GenBank parsing                            │
+│  │  └─ 3&#39;UTR extraction                           │
+│  ├─ Parsers (parsers.py)                          │
+│  │  └─ Seed range parsing                         │
+│  └─ Data Access                                   │
+├───────────────────────────────────────────────────┤
+│         Data Layer                                 │
+│  ├─ microRNA Database (~48,860 sequences)          │
+│  ├─ User Files (FASTA, GenBank)                   │
+│  └─ External APIs (NCBI GenBank)                  │
+└───────────────────────────────────────────────────┘
+</code></pre></div>
+<hr />
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../assets/js/google-analytics.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1987 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A tool for identifying microRNA binding sites on target mRNA sequences">
+      
+      
+        <meta name="author" content="Your Team Name">
+      
+      
+        <link rel="canonical" href="https://yoursite.com/features/matching_mode/">
+      
+      
+        <link rel="prev" href="../../guide/installation/">
+      
+      
+        <link rel="next" href="../dynamite_mode/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Matching Mode - DynamiR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-W20WZ887RV"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-W20WZ887RV",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-W20WZ887RV",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#matching-mode-direct-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DynamiR" class="md-header__button md-logo" aria-label="DynamiR" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DynamiR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Matching Mode
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/getting_started/" class="md-tabs__link">
+          
+  
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Features
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/biology/" class="md-tabs__link">
+          
+  
+  
+  Understanding
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DynamiR" class="md-nav__button md-logo" aria-label="DynamiR" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    DynamiR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matching Mode
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matching Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-matching-mode-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Matching Mode Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Matching Mode Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-Step Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-input-microrna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Input: microRNA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Input: microRNA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-database-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Database ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-direct-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: Direct Sequence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-input-target-mrna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Input: Target mRNA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Input: Target mRNA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-genbank-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: GenBank ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-genbank-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: GenBank File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-fasta-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: FASTA File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-d-direct-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option D: Direct Sequence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-input-seed-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Input: Seed Region
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ Input: Seed Region">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-seed-positions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Seed Positions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-seed-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Seed Regions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-seed-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Seed Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-run-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Run Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#result-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-each-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting Each Line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistics-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistics Explained
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-multiple-binding-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting Multiple Binding Sites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-results-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Results Mean
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Results Mean">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#positive-result-sites-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Positive Result (Sites Found)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negative-result-no-sites-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Negative Result (No Sites Found)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips &amp; Tricks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips &amp; Tricks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-better-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Get Better Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-up-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ Speed Up Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deeper-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Deeper Exploration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dynamite_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamite Mode (Database Scan)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Understanding
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/biology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Biological Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/how_it_works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How It Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-matching-mode-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Matching Mode Works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Matching Mode Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-Step Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-input-microrna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Input: microRNA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Input: microRNA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-database-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Database ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-direct-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: Direct Sequence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-input-target-mrna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Input: Target mRNA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Input: Target mRNA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-genbank-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: GenBank ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-genbank-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: GenBank File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-fasta-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: FASTA File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-d-direct-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option D: Direct Sequence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-input-seed-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Input: Seed Region
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ Input: Seed Region">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-seed-positions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Seed Positions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-seed-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Seed Regions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-seed-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Seed Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-run-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Run Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Results
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#result-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-each-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting Each Line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistics-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistics Explained
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-multiple-binding-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting Multiple Binding Sites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-results-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Results Mean
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Results Mean">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#positive-result-sites-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Positive Result (Sites Found)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negative-result-no-sites-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Negative Result (No Sites Found)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips &amp; Tricks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips &amp; Tricks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-better-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Get Better Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-up-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ Speed Up Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deeper-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Deeper Exploration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="matching-mode-direct-analysis">Matching Mode - Direct Analysis</h1>
+<h2 id="overview">Overview</h2>
+<p><strong>Matching Mode</strong> allows you to analyze a <strong>specific microRNA</strong> against a <strong>target mRNA</strong> to determine if binding can occur and where the binding sites are located.</p>
+<p>Perfect for:
+- ✅ Validating known microRNA-mRNA interactions
+- ✅ Testing hypothesis about specific regulators
+- ✅ Getting detailed binding site information
+- ✅ Visualizing RNA duplex alignments</p>
+<hr />
+<h2 id="how-matching-mode-works">How Matching Mode Works</h2>
+<h3 id="the-algorithm">The Algorithm</h3>
+<div class="highlight"><pre><span></span><code>1. User provides: microRNA + mRNA + Seed Region
+   Example: mir-30a + SMAD1 gene + positions 2-7
+
+2. Extract seed from microRNA (positions 2-7)
+   Example: GCCAUC
+
+3. Reverse complement the seed
+   microRNA:  5&#39;- G C C A U C -3&#39;
+   Complement:3&#39;- C G G U A G -5&#39;
+
+4. Search for this sequence throughout mRNA
+
+5. For each match found:
+   - Display position in mRNA
+   - Show full duplex alignment
+   - Calculate pairing statistics
+</code></pre></div>
+<h3 id="input-requirements">Input Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Format</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>microRNA</strong></td>
+<td>Sequence (19-23 nt)</td>
+<td>UGUGAAACGUGCGACACUAA</td>
+</tr>
+<tr>
+<td><strong>mRNA</strong></td>
+<td>Sequence (100+ nt)</td>
+<td>AUGAAACGCGAGCGACGAGC...</td>
+</tr>
+<tr>
+<td><strong>Seed Region</strong></td>
+<td>Positions (start-end)</td>
+<td>2-7</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="step-by-step-analysis">Step-by-Step Analysis</h2>
+<h3 id="1-input-microrna">1️⃣ Input: microRNA</h3>
+<p>Choose how to provide the microRNA:</p>
+<h4 id="option-a-database-id">Option A: Database ID</h4>
+<p><div class="highlight"><pre><span></span><code>Select: ⊙ DB ID
+Enter: MIMAT0007560
+</code></pre></div>
+<strong>Fetches from</strong>: miRBase database<br />
+<strong>Auto-loads</strong>: Full mature microRNA sequence<br />
+<strong>Example IDs</strong>:
+- MIMAT0007560 (mmu-mir-30a)
+- MIMAT0000062 (mmu-let-7a)</p>
+<h4 id="option-b-file">Option B: File</h4>
+<p><div class="highlight"><pre><span></span><code>Select: ⊙ File
+Choose: [Browse] → select_file.fa
+</code></pre></div>
+<strong>Format</strong>: FASTA file<br />
+<strong>Content</strong>: Plain RNA/DNA sequence<br />
+<strong>Example file</strong>:
+<div class="highlight"><pre><span></span><code>&gt;mir-30a
+UGUGAAACGUGCGACACUAA
+</code></pre></div></p>
+<h4 id="option-c-direct-sequence">Option C: Direct Sequence</h4>
+<p><div class="highlight"><pre><span></span><code>Select: ⊙ Sequence
+Paste: UGUGAAACGUGCGACACUAA
+</code></pre></div>
+<strong>Format</strong>: Plain text sequence<br />
+<strong>Notes</strong>: Whitespace ignored, case-insensitive</p>
+<hr />
+<h3 id="2-input-target-mrna">2️⃣ Input: Target mRNA</h3>
+<p>Choose how to provide the mRNA (important: only 3'UTR is analyzed):</p>
+<h4 id="option-a-genbank-id">Option A: GenBank ID</h4>
+<p><div class="highlight"><pre><span></span><code>Select: ⊙ GenBank ID
+Enter: NM_008539
+</code></pre></div>
+<strong>Fetches from</strong>: NCBI Entrez<br />
+<strong>Auto-extracts</strong>: 3'UTR region (after stop codon)<br />
+<strong>Example IDs</strong>:
+- NM_008539 (mouse SMAD1)
+- NM_002111.8 (human TP53)</p>
+<p>⚠️ <strong>Note on Position Numbering</strong>: When DynamiR extracts the 3'UTR from GenBank, nucleotide position 1 starts at the beginning of the 3'UTR region (right after the CDS stop codon). This is the binding region of interest.</p>
+<h4 id="option-b-genbank-file">Option B: GenBank File</h4>
+<p><div class="highlight"><pre><span></span><code>Select: ⊙ File
+Choose: [Browse] → gene.gb
+</code></pre></div>
+<strong>Format</strong>: GenBank file (.gb, .gbk) or FASTA file (.fa, .fasta)<br />
+<strong>Auto-extracts</strong>: 3'UTR from CDS annotation (GenBank only)<br />
+<strong>Benefits</strong>: No internet needed, local analysis</p>
+<p>⚠️ <strong>Note on Position Numbering</strong>: When using GenBank files, nucleotide position 1 is set at the start of the 3'UTR region (right after the CDS stop codon). Results report positions relative to this 3'UTR start point.</p>
+<h4 id="option-c-fasta-file">Option C: FASTA File</h4>
+<p><div class="highlight"><pre><span></span><code>Select: ⊙ File
+Choose: [Browse] → sequence.fa
+</code></pre></div>
+<strong>Format</strong>: FASTA file (.fa, .fasta)<br />
+<strong>Note</strong>: Uses entire sequence (you must provide only 3'UTR)</p>
+<h4 id="option-d-direct-sequence">Option D: Direct Sequence</h4>
+<p><div class="highlight"><pre><span></span><code>Select: ⊙ Sequence
+Paste: AUGAAACGCGAGCGACGAGC...
+</code></pre></div>
+<strong>Format</strong>: Plain text<br />
+<strong>Important</strong>: Paste only the 3'UTR region</p>
+<hr />
+<h3 id="3-input-seed-region">3️⃣ Input: Seed Region</h3>
+<p>Specify which positions of the microRNA must match:</p>
+<div class="highlight"><pre><span></span><code>Seed: 2-7
+</code></pre></div>
+<h4 id="understanding-seed-positions">Understanding Seed Positions</h4>
+<div class="highlight"><pre><span></span><code>microRNA sequence (5&#39; to 3&#39;):
+Position: 1  2  3  4  5  6  7  8  9  10...
+Base:     U  G  U  A  A  C  G  U  G  C
+
+Seed region 2-7: G U A A C G (highlighted)
+              ↑  ↑  ↑  ↑  ↑  ↑
+              These 6 positions MUST match
+</code></pre></div>
+<h4 id="common-seed-regions">Common Seed Regions</h4>
+<ul>
+<li><strong>2-7</strong>: Most common, 6 nucleotides</li>
+<li><strong>2-8</strong>: More stringent, 7 nucleotides</li>
+<li><strong>1-8</strong>: Strictest, 8 nucleotides</li>
+<li><strong>2-6</strong>: More permissive, 5 nucleotides</li>
+</ul>
+<h4 id="why-seed-matters">Why Seed Matters</h4>
+<p>The seed region is most critical for:
+- ✅ Binding specificity
+- ✅ Thermodynamic stability
+- ✅ Regulatory effectiveness</p>
+<hr />
+<h3 id="4-run-analysis">4️⃣ Run Analysis</h3>
+<p>Click the <strong>[ Parse ]</strong> button</p>
+<p><strong>What happens</strong>:
+1. Validates all inputs
+2. Extracts seed region from microRNA
+3. Creates reverse complement
+4. Searches entire mRNA
+5. For each match: calculates full alignment
+6. Displays results</p>
+<p><strong>Timing</strong>: Usually &lt; 1 second</p>
+<hr />
+<h2 id="understanding-results">Understanding Results</h2>
+<h3 id="result-display">Result Display</h3>
+<div class="highlight"><pre><span></span><code>==================================================
+Number of binding sites found: 2
+==================================================
+
+mRNA binding position: 450
+microRNA region:   1- 22
+mRNA region:    440-460
+
+3&#39; (22)  CGAGACGUCGAGUGCGACGAU  5&#39; (microRNA): MIMAT0007560
+             ||||:||:|||||||||
+5&#39; (450) GCUCUGCAGCUCACGCUGCUA  3&#39; (mRNA): NM_008539
+
+Seed region: 2-7 (marked with *)
+
+ALIGNMENT STATISTICS:
+  Total base pairs: 18
+  Watson-Crick pairs: 16 (strong)
+  Wobble pairs: 2 (weak)
+  Supplementary pairs outside seed: 10
+  Binding strength: 78%
+</code></pre></div>
+<h3 id="interpreting-each-line">Interpreting Each Line</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>mRNA binding position</strong></td>
+<td>Where in mRNA the binding starts (1-indexed)</td>
+</tr>
+<tr>
+<td><strong>microRNA region</strong></td>
+<td>Which nucleotides of microRNA are shown</td>
+</tr>
+<tr>
+<td><strong>mRNA region</strong></td>
+<td>Which nucleotides of mRNA are shown</td>
+</tr>
+<tr>
+<td><strong><code>\|</code> symbol</strong></td>
+<td>Watson-Crick pair (strong: A-U or C-G)</td>
+</tr>
+<tr>
+<td><strong><code>:</code> symbol</strong></td>
+<td>Wobble pair (weaker: G-U)</td>
+</tr>
+<tr>
+<td><strong><code></code> (space)</strong></td>
+<td>Mismatch (no pairing)</td>
+</tr>
+<tr>
+<td><strong><code>*</code> marker</strong></td>
+<td>Seed region (positions 2-7)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="statistics-explained">Statistics Explained</h3>
+<p><strong>Watson-Crick Pairs</strong>
+- Strongest, most stable bonds
+- A pairs with U
+- C pairs with G
+- Score: 1.0 point each</p>
+<p><strong>Wobble Pairs</strong>
+- Weaker but biologically valid
+- G pairs with U (non-standard)
+- Score: 0.5 point each</p>
+<p><strong>Binding Strength</strong>
+<div class="highlight"><pre><span></span><code>Formula: (WC_pairs × 1.0 + Wobble_pairs × 0.5) / microRNA_length
+Example: (16 + 2×0.5) / 22 = 17/22 = 77%
+</code></pre></div></p>
+<p>Higher percentage = stronger binding</p>
+<hr />
+<h2 id="interpreting-multiple-binding-sites">Interpreting Multiple Binding Sites</h2>
+<p>If multiple sites are found:</p>
+<div class="highlight"><pre><span></span><code>Number of binding sites found: 3
+
+[First site alignment]
+...
+
+[Second site alignment]
+...
+
+[Third site alignment]
+...
+</code></pre></div>
+<p><strong>Meaning</strong>:
+- microRNA can bind to multiple locations
+- Each location is independent
+- Can indicate multiple regulatory pathways
+- Some sites may be stronger than others</p>
+<hr />
+<h2 id="what-results-mean">What Results Mean</h2>
+<h3 id="positive-result-sites-found">✅ Positive Result (Sites Found)</h3>
+<p><div class="highlight"><pre><span></span><code>Number of binding sites found: 2
+</code></pre></div>
+<strong>Interpretation</strong>:
+- microRNA likely DOES regulate this mRNA
+- Binding can occur at specified location(s)
+- The seed region matches perfectly
+- Additional pairing provides stability</p>
+<p><strong>Next Steps</strong>:
+- Validate experimentally (if needed)
+- Study the identified sites
+- Check if they're in regulatory regions
+- Download results for record-keeping</p>
+<h3 id="negative-result-no-sites-found">❌ Negative Result (No Sites Found)</h3>
+<p><div class="highlight"><pre><span></span><code>No binding sites found with these parameters
+</code></pre></div>
+<strong>Possible Meanings</strong>:
+- microRNA doesn't bind this mRNA with your seed settings
+- Try a different seed region (2-8, 2-6)
+- Verify your sequences are correct
+- Check that mRNA is the 3'UTR region</p>
+<hr />
+<h2 id="exporting-results">Exporting Results</h2>
+<p>Click the <strong>💾</strong> button to save results</p>
+<p><strong>What gets saved</strong>:
+- All binding site information
+- Complete alignments
+- Statistics and calculations
+- Input sequence information</p>
+<p><strong>Format</strong>: Plain text file (.txt)<br />
+<strong>Default name</strong>: <code>matching_results.txt</code></p>
+<p><strong>Use cases</strong>:
+- Archive your analysis
+- Share with colleagues
+- Include in publications
+- Integrate with other tools</p>
+<hr />
+<h2 id="tips-tricks">Tips &amp; Tricks</h2>
+<h3 id="get-better-results">🎯 Get Better Results</h3>
+<ol>
+<li><strong>Use GenBank IDs</strong> when possible - ensures 3'UTR extraction</li>
+<li><strong>Verify input sequences</strong> - typos cause false negatives</li>
+<li><strong>Try different seed regions</strong> - sometimes 2-8 works better</li>
+<li><strong>Check multiple microRNAs</strong> - helps find primary regulator</li>
+</ol>
+<h3 id="speed-up-analysis">⏱️ Speed Up Analysis</h3>
+<ul>
+<li>Direct sequence input is fastest (no database lookup)</li>
+<li>Files are faster than IDs (no internet needed)</li>
+<li>Short sequences analyze faster than long ones</li>
+</ul>
+<p><strong>Internet Requirements</strong>:</p>
+<ul>
+<li>⚡ <strong>microRNA Database ID</strong>: No internet needed (database is pre-downloaded locally)</li>
+<li>🌐 <strong>mRNA GenBank ID</strong>: Requires internet to fetch from NCBI</li>
+<li>📁 <strong>Files</strong>: No internet needed (local analysis)</li>
+<li>✏️ <strong>Direct Sequence</strong>: No internet needed</li>
+</ul>
+<h3 id="deeper-exploration">🔍 Deeper Exploration</h3>
+<ul>
+<li>Run same microRNA against different mRNAs</li>
+<li>Test multiple seed regions</li>
+<li>Use Dynamite mode to find other targets</li>
+<li>Compare results between different annotations</li>
+</ul>
+<hr />
+<h2 id="common-questions">Common Questions</h2>
+<p><strong>Q: Why is my seed 2-7 but I see 8 pairing nucleotides?</strong><br />
+A: The seed (2-7) MUST match, but often additional nucleotides (position 1 and 8+) also pair. These strengthen the binding but aren't required.</p>
+<p><strong>Q: Can I use the full mRNA sequence instead of 3'UTR?</strong><br />
+A: Yes, but results may include unrealistic binding sites in coding regions. 3'UTR is where real microRNA binding occurs.</p>
+<p><strong>Q: What if I get thousands of binding sites?</strong><br />
+A: This can happen with short seeds or very long mRNAs. Try a longer seed region (2-8 instead of 2-7) or more stringent criteria.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../assets/js/google-analytics.js"></script>
+      
+    
+  </body>
+</html>
