@@ -16,7 +16,6 @@ DynamiR is a bioinformatics application designed to analyze microRNA (miRNA) bin
 
 - **Matching Mode**: Direct alignment of a user-provided microRNA against a target mRNA
 - **Dynamite Mode**: High-throughput screening of entire miRNA database against target mRNA
-- **BLAST Mode**: Sequence homology searching with BLAST algorithm
 
 ## ✨ Features
 
@@ -196,17 +195,12 @@ Non-standard but functional pair:
 - Verify file contains valid sequence data
 - Check file encoding (UTF-8 recommended)
 
-### Analysis Takes Too Long
-- BLAST mode may require 5-10 seconds for large databases
-- Dynamite mode will display a loading indicator
-- Do not close the application during analysis
-
 ## 📝 Citation
 
 If you use this tool, please cite:
 ```
 DynamiR: microRNA Binding Site Analysis Tool
-Rémi Hocquet Martin, 2024
+Rémi Hocquet Martin, 2026
 ```
 
 ## 🤝 Contributing
