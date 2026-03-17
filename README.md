@@ -10,6 +10,8 @@ A comprehensive graphical tool for identifying microRNA binding sites on target 
 
 </div>
 
+- [DynamiR Documentation](https://remi-hocquetmartin.github.io/dynamiR/)
+
 ## 🔬 Overview
 
 DynamiR is a bioinformatics application designed to analyze microRNA (miRNA) binding sites on messenger RNA (mRNA) sequences. It provides three complementary analysis modes to support different research workflows:
