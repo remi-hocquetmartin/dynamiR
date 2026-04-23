@@ -39,7 +39,7 @@ DynamiR is a bioinformatics application designed to analyze microRNA (miRNA) bin
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/dynamiR.git
+git clone https://github.com/remi-hocquetmartin/dynamiR.git
 cd dynamiR
 ```
 
