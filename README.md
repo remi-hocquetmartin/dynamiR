@@ -74,12 +74,6 @@ Scan entire miRNA database against target mRNA:
 3. Click "Parse" to run analysis (~5-10 seconds)
 4. Results show all microRNAs with binding affinity
 
-### BLAST Mode
-Sequence homology searching:
-1. Enter query mRNA sequence
-2. Specify identity threshold
-3. Click "Parse" to run BLAST search
-4. Results displayed with E-values and alignment metrics
 
 ## 🏗️ Project Structure
 
